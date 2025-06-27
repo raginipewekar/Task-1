@@ -32,20 +32,3 @@ Below is the entity-relationship diagram of the system, generated via MySQL Work
 
 <img width="419" alt="image" src="https://github.com/user-attachments/assets/41ac4f7e-873a-4086-86f5-7249afbce015" />
 
-
-
----
-
-## 🧪 Sample Queries
-
-```sql
--- List all books with their genre
-SELECT Book.title, Genre.genre_name
-FROM Book
-JOIN Genre ON Book.genre_id = Genre.genre_id;
-
--- List all members who issued a specific book
-SELECT Members.name, Book.title
-FROM Issue
-JOIN Members ON Issue.member_id = Members.member_id
-JOIN Book ON Issue.book_id = Book.book_id;
